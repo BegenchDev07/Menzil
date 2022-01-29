@@ -1,0 +1,29 @@
+<%- include('header_begn'); %>
+<div class="container col-xxl-8 px-4 py-5">
+<div class="col-md-6 m-auto">
+    <h1 class="my-4">Lets upload some stuff</h1>
+    <form action="/BitaBi" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" name="profile-file" type="file" id="formFile">
+          </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="title of a news" name="data" required>
+            <br>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desc" placeholder="please enter the descrition" required></textarea>
+            <br>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="language of a news e.g tkm, ru, en" name="lang" required>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary btn-block">
+    </form>
+    <br>
+    <hr>
+    <input type="submit" value="Upload a product" class="btn btn-warning btn-block" onclick="locator()" >
+</div>
+</div>
+<script>
+    function locator(){
+        window.location.href = '/BitaBi_products';
+    }
+</script>
+<%- include('header_end'); %>

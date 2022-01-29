@@ -1,0 +1,33 @@
+<%- include('header_begn'); %>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="col-md-6 m-auto">
+        <h1 class="my-4">Lets upload some products</h1>
+        <form action="/BitaBi_products" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" name="profile-files" type="file" id="formFile" multiple/>
+              </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Naming of a product" name="name" required>
+                <br>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" placeholder="please enter some description  of a product" required></textarea>
+                <br>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="price of a product" name="price" required>
+                <br>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="pieces of a product" name="pieces" required>
+                <br>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="language of a product for e.g tkm, ru, en" name="lang" required>
+            </div>
+            <hr>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+        </form>
+        <br>
+        <input type="submit" value="Back to news post page" class="btn btn-warning btn-block" onclick="locator()" >
+    </div>
+</div>
+    <script>
+        function locator(){
+            window.location.href = '/BitaBi';
+        }
+    </script>
+<%- include('header_end'); %>

@@ -1,0 +1,12 @@
+<%- include('header_begn'); %>
+<div class="container col-xxl-8 px-4 py-5">
+    <% for(i = 0; i < data.length; i++){%>
+    <div class="card-body">
+        <img src="/<%=data[i].filename%>" class="card-img-top" alt="photo" style="padding-top: 5%;">
+        <h5 class="card-title" id="heading"><%=data[i].title%> %></h5>
+        <p class="card-text"><%= data[i].desc %></p>
+      </div>
+      <a class="btn btn-outline-danger" href="/delete/<%=data[i]._id%>" role="button">Delete</a>
+    <% } %>
+</div>
+<%- include('header_end'); %>

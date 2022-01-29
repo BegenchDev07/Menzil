@@ -1,0 +1,17 @@
+<%- include('header_begn'); %>
+<div class="container col-xxl-8 px-4 py-5">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <% for(var i = 0; i < data.filename.length; i++){ %> 
+    <div class="carousel-inner">
+        <img class="d-block w-100" src="/products/<%=data.filename[i]%>" alt="First slide">
+        <br>
+      <%}%>
+      <hr>
+      <h2> <b> Name:</b> <%=data.name%></h2>
+      <h2> <b> Description: </b> <p><%=data.description%></p></h2>
+      <h2> <b> Price: </b> <p><%=data.price%></p></h2>
+      <h2> <b> Piece: </b> <p><%=data.pieces%></p></h2>
+    </div>
+    <a class="btn btn-outline-primary" href="/Products">Go Back!</a>
+</div>
+<%- include('header_end'); %>

@@ -1,0 +1,17 @@
+<%- include('header_begn'); %>
+    <form action="/admin" method="post">
+        <div class="container col-xxl-8 px-4 py-5">
+        <h1 class="header-logo text-dark text-center">Login</h1>
+        <hr>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Login</label>
+            <input type="text" class="form-control" name="username"  placeholder="Login" required>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary btn-lg">Submit</button>
+        </div>
+    </form>
+<%- include('header_end'); %>

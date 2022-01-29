@@ -1,0 +1,24 @@
+<%- include('header_begn'); %>
+<div class="container col-xxl-8 px-4 py-5">
+<div class="container">
+<div class="row align-items-center">
+<% for(i = 0; i < data.length; i++){%>
+<div class="card" style="width: 18rem; background-color: rgb(221, 217, 209); margin-right: 1%; margin-bottom: 2%;">
+  
+  <script>
+    
+  </script>
+    <div class="card-body">
+      <img src="/products/<%=data[i].filename[0]%>" class="card-img-top" alt="photo" style="padding-top: 5%;">
+      <h5 class="card-title" id="heading"><%=data[i].name%> %></h5>
+      <p class="card-text"><%= data[i].description %></p>
+      <a href="/product/<%=data[i].name%>">See more...</a>
+    </div>
+  </div>
+<% } %>
+
+</div>
+</div>
+</div>
+
+<%- include('header_end'); %>
